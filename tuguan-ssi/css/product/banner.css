@@ -1,0 +1,395 @@
+/* global */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* clear default click style */
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+.btn:hover {
+    color: #2ab4f2 !important;
+}
+
+
+/* global extra button style */
+
+.banner-button .extra {
+    width: 110px;
+    height: 32px;
+    border-radius: 2px;
+    font-family: MicrosoftYaHei;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    box-shadow: 0px 1px 2px 0px #000000;
+    opacity: 0.97;
+    cursor: pointer;
+    border: none;
+    background-image: linear-gradient(-90deg, #1d7ce1 0%, #29b8f4 100%), linear-gradient(#1d7ce1, #1d7ce1);
+}
+
+
+/* common margin */
+
+#product-banner {
+    margin-top: 70px;
+    font-family: MicrosoftYaHei;
+}
+
+
+/* banner */
+
+#product-banner {
+    width: 100%;
+    height: 645px;
+    /* background-color: #393f4d; */
+    background-color: #fff;
+    /* display: flex;
+  align-items: center; */
+    position: relative;
+}
+
+#product-banner .banner-container {
+    padding-top: 170px;
+    padding-left: 16%;
+}
+
+#product-banner .banner-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+/* banner title */
+
+#product-banner .banner-container span {
+    font-family: 'MicrosoftYaHei';
+    font-size: 54px;
+    /* font-size: 46px; */
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 2px 6px #000000;
+    margin-left: 20px;
+}
+
+
+/* content */
+
+#product-banner .banner-container p {
+    width: 650px;
+    font-family: 'MicrosoftYaHei';
+    color: #ffffff;
+    font-size: 16px;
+    text-shadow: 0px 2px 6px #000000;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    padding: 20px;
+    background-color: rgb(0 0 0 / 60%);
+    margin: 30px 0;
+    /* background: url(/img/industry/smart-weather/banner_bg.png) repeat; */
+    backdrop-filter: blur(5px);
+    text-align: justify;
+}
+
+#product-banner .banner-container .p-dark {
+    background-color: rgb(0 0 0 / 40%);
+}
+
+#product-banner .banner-container .p-dark-blue {
+    /* #081b39 */
+    background-color: rgb(8 27 57 / 60%);
+}
+
+#product-banner .banner-container .p-tint {
+    background-color: rgb(0 0 0 / 20%);
+}
+
+
+/* button */
+
+.banner-button {
+    margin-left: 15px;
+}
+
+.banner-button button {
+    width: 110px;
+    height: 36px;
+    line-height: 36px;
+    font-family: MicrosoftYaHei;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    /* box-shadow: 0px 1px 2px 0px #000000; */
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    /* border: 1px solid #2ab4f2; */
+    margin: 5px;
+    background: #0565f3;
+    box-shadow: 0px 2px 36px 4px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.banner-button .text-long {
+    width: 160px;
+}
+
+.banner-button button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.banner-button button .select-container {
+    position: absolute;
+    top: 40px;
+    /* left: -20px; */
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s;
+}
+.select-menu .banner-button button .select-container .temporary{
+  display: none;
+}
+
+.banner-button button .select-container .option {
+    width: 150px;
+    /* width: 110px; */
+    height: 36px;
+    border-radius: 2px;
+    background: rgba(22, 47, 97, 0.9);
+    margin-bottom: 4px;
+}
+.banner-button button .select-container .option.standard {
+  width: 110px;
+}
+
+.banner-button button .select-container .option:hover {
+    background: #0565f3;
+}
+
+.banner-button button .select-container.show-select {
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* banner menu */
+
+#banner-menu {
+    width: 100%;
+}
+
+#banner-menu .banner-menu-container {
+    width: 100%;
+    max-width: 1920px;
+    height: 53px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    /* box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45); */
+}
+
+#banner-menu .banner-menu-container li {
+    list-style: none;
+    height: 53px;
+    line-height: 53px;
+}
+
+#banner-menu .banner-menu-container .active {
+    border-bottom: 2px solid #0096ec;
+    box-sizing: border-box;
+}
+
+#banner-menu .banner-menu-container a {
+    text-decoration: none;
+    font-family: MicrosoftYaHei;
+    font-size: 18px;
+    color: #515a6e;
+    cursor: pointer;
+}
+
+.unified-development-API-back .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/unified_development_API/unified-development-API-back.jpg) no-repeat center/cover;
+}
+
+.api-test-back .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/api-test/product_api_test_banner.jpg) no-repeat center/cover;
+}
+
+.application-editor .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/application-editor/application-editor-banner.jpg) no-repeat center/cover;
+}
+
+.scene-building-service .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/scene-building-service/scene_building_service_banner.jpg) no-repeat center/cover;
+}
+
+.scene-building-service .scene-building-service-phone {
+    display: none;
+}
+
+.application-development-service .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/application-development-service/application_development_service_banner.jpg) no-repeat center/cover;
+}
+
+.training-technical-support .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/training-technical-support/training_technical_support_banner.jpg) no-repeat center/cover;
+}
+
+.web-editor-back .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/end_rendering/editor_banner.jpg) no-repeat center/cover;
+}
+
+.stream-server .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/product/streaming_rendering/service_banner.jpg) no-repeat center/cover;
+}
+
+.smart-city .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/case/smart-city/case-city.jpg) no-repeat center/cover;
+}
+
+.intelligent-twin-engineering .stream-server-box {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../../img/intelligent-twin-engineering/intelligent-twin-engineering-banner.jpg) no-repeat center/cover;
+}
+
+
+/* media */
+@media screen and (min-width: 959px) {
+  /* 解决统一开发 API 页面按钮下拉框距离底部过近 */
+  #product-banner .banner-container.top-short {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+    #product-banner .banner-container {
+        width: 100%;
+        height: 100%;
+        /* margin: 0 68px; */
+        text-align: center;
+        /* padding-left: 0px; */
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #product-banner .banner-container span {
+        font-size: 40px;
+        margin-left: 0;
+    }
+    #product-banner .banner-container p {
+        width: 85% !important;
+        /* margin: 0 auto; */
+        padding: 20px;
+        font-size: 14px;
+    }
+    .banner-button {
+        margin-left: 0;
+    }
+    /* 场景构建服务的移动端 banner */
+    .scene-building-service .stream-server-box {
+        max-width: 1920px;
+        height: 100%;
+        margin: 0 auto;
+        background: url(../../img/product/scene-building-service/phone_banner_bg.jpg) no-repeat center/cover;
+    }
+    .scene-building-service .scene-building-service-phone {
+        display: block;
+        width: 80%;
+    }
+    .scene-building-service .scene-building-service-phone img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+  #product-banner .banner-container.select-menu .bottom-select-menu {
+    margin-bottom: 105px;
+  }
+  .select-menu .banner-button button .select-container {
+    top: -115px;
+  }
+  .select-menu .banner-button button .select-container.show-select {
+    top: -123px;
+  }
+  /* 下拉选择按钮项的临时占位 */
+  .select-menu .banner-button button .select-container .temporary{
+    display: block;
+    background-color: transparent;
+    cursor: default;
+  }
+}
+/* 统一开发 API 页面的按钮下拉框 */
+@media screen and (max-width: 495px) {
+  #product-banner .banner-container.top-short .bottom-select-menu {
+    margin-bottom: 105px;
+  }
+  .top-short .banner-button button .select-container {
+    top: -115px;
+  }
+  .top-short .banner-button button .select-container.show-select {
+    top: -123px;
+  }
+}
+
+/* font icon */
+
+.iconfont {
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

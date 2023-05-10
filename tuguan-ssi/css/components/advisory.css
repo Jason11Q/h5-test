@@ -1,0 +1,597 @@
+#product-advisory {
+  width: 100%;
+  background: url(../../img/product/end_rendering/advisory/advisory.png)
+    no-repeat center/cover;
+  font-family: 'Microsoft YaHei';
+}
+
+#advisory-container {
+  font-family: 'Microsoft YaHei';
+  margin: 0 auto;
+  max-width: 1440px;
+  /* padding-top: 76px; */
+  padding: 60px 40px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#advisory-container .advisory-card {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 81%;
+}
+
+#advisory-container .advisory-card .advisory-form {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+#advisory-container .advisory-card .advisory-form > div {
+  width: 86%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#advisory-container .advisory-card .advisory-form .advisory-form-area {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-box {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+#advisory-container .advisory-card .advisory-form .advisory-form-area button {
+  /* background-image: linear-gradient(-90deg, #1d7ce1 0%, #29b8f4 100%),
+    linear-gradient(#ffffff, #ffffff); */
+  background-blend-mode: normal, normal;
+  color: #ffffff;
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.75);
+  font-family: 'Microsoft YaHei';
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  width: 230px;
+  height: 50px;
+  cursor: pointer;
+  margin: 20px auto 54px;
+  background-color: #1078e2;
+}
+#advisory-container .advisory-card .advisory-form-area .advisory-title {
+  width: 100%;
+  /* height: 60px; */
+  font-family: 'MicrosoftYaHei';
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #515a6e;
+  text-align: center;
+}
+#advisory-container .advisory-card .advisory-title {
+  margin: 12px 0;
+  font-family: 'Microsoft YaHei';
+  font-size: 18px;
+  line-height: 24px;
+  color: #515a6e;
+  text-align: center;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-box
+  .advisory-form-item {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #252d40;
+  padding: 0 9px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  .text-style-1 {
+  font-family: 'Microsoft YaHei';
+  font-size: 16px;
+  color: #c93a55;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  input {
+  width: 100%;
+  padding: 7px;
+  color: #17233d !important;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 14px !important;
+  font-family: 'Microsoft YaHei' !important;
+  line-height: 40px;
+  background-color: #ffffff;
+  border: solid 1px #808695;
+  border-radius: 3px;
+  /* color: #c5c8ce; */
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  input:focus {
+  outline: none;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #c5c8ce;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #c5c8ce;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #c5c8ce;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #c5c8ce;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item:nth-child(4)
+  input {
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+#error-message,
+#error-message-email,
+#error-message-phone,
+#error-message-length,
+#error-message-company,
+#error-message-remark {
+  width: 100%;
+  right: 0px !important;
+  bottom: -28px !important;
+}
+
+#error-message::before,
+#error-message-email::before,
+#error-message-phone::before,
+#error-message-length::before,
+#error-message-company::before,
+#error-message-remark::before {
+  display: none;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-item
+  #verification {
+  position: absolute;
+  top: 34px;
+  right: 14px;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei' !important;
+  font-size: 14px;
+  color: #1d7ce1;
+  padding-left: 7px;
+  background: white;
+  border-left: 1px solid #c5c8ce;
+  cursor: pointer;
+}
+
+#advisory-container .advisory-card .advisory-form .advisory-qr > div {
+  margin: 0 5%;
+  box-sizing: border-box;
+  width: 132px;
+}
+
+#advisory-container .advisory-card .advisory-form .advisory-qr {
+  text-align: center;
+}
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-qr
+  .advisory-qr-tooltip {
+  margin-top: 7px;
+}
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-qr
+  .advisory-wechat-tooltip {
+  margin-top: 7px;
+}
+#advisory-container .advisory-card .advisory-form .advisory-qr .advisory-title {
+  width: 125px;
+  font-family: 'Microsoft YaHei' !important;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 38px;
+  letter-spacing: 1px;
+  margin-top: -80px;
+  padding-bottom: 10px;
+  color: #17233d;
+}
+
+#advisory-container .advisory-card .advisory-form .advisory-qr p {
+  font-family: 'Microsoft YaHei' !important;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: #515a6e;
+  margin: 0;
+}
+
+#advisory-container .advisory-card .advisory-form .advisory-qr p:first-child {
+  font-family: 'Microsoft YaHei' !important;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #1d7ce1;
+}
+
+#advisory-container .advisory-card .advisory-form .advisory-qr img {
+  width: 132px;
+  border: 1px solid #6aa8eb;
+}
+
+#advisory-container
+  .advisory-card
+  .advisory-form
+  .advisory-form-area
+  .advisory-form-box
+  .advisory-form-item {
+  margin-bottom: 18px;
+}
+
+/* introduction title */
+.introduction-section-title {
+  width: fit-content;
+  width: -moz-fit-content;
+  font-size: 30px;
+  color: #17233d;
+  padding: 9px 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 5px solid #1177e3;
+  font-family: 'Microsoft YaHei' !important;
+}
+
+/* media */
+@media screen and (max-width: 1439px) {
+  #advisory-container .advisory-card {
+    width: 100%;
+  }
+  
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-box
+    .advisory-form-item {
+    font-size: 15px;
+  }
+
+  #advisory-container .advisory-card .advisory-form-area .advisory-title {
+    font-size: 17px;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-item
+    #verification {
+    top: 33px;
+    z-index: 10;
+  }
+
+  #error-message,
+  #error-message-email,
+  #error-message-phone,
+  #error-message-length,
+  #error-message-company,
+  #error-message-remark {
+    width: 100%;
+    right: 10px !important;
+    bottom: -21px !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-box
+    .advisory-form-item {
+    font-size: 14px;
+    margin: 12px 0 !important;
+  }
+
+  #advisory-container {
+    padding-top: 30px;
+  }
+
+  #advisory-container .advisory-card .advisory-form-area .advisory-title {
+    font-size: 16px;
+  }
+
+  #product-advisory {
+    background: none;
+  }
+
+  #advisory-container .advisory-card .advisory-form {
+    background: url(../../img/product/end_rendering/advisory/advisory.png)
+      no-repeat center/cover;
+    border: 1px solid#c7c8cd;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+
+  #advisory-container .advisory-card .advisory-form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #advisory-container .advisory-card .advisory-form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #advisory-container .advisory-card .advisory-form .advisory-qr > div {
+    padding: 0 10px;
+  }
+
+  #error-message,
+  #error-message-email,
+  #error-message-phone,
+  #error-message-length,
+  #error-message-company,
+  #error-message-remark {
+    width: 100%;
+    right: 0px !important;
+    bottom: -28px !important;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-box {
+    padding: 0 18px;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-box
+    .advisory-form-item {
+    border-radius: 4px;
+    border: 1px solid #cacbcd;
+    background: #ffffff;
+    margin: 6px 0;
+    flex-direction: row;
+    flex: 0 0 100%;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-item
+    input {
+    width: auto;
+    flex: 1;
+    border: none;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-item
+    > div {
+    min-width: 100px;
+    line-height: 40px;
+    position: relative;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-item
+    > div::before {
+    content: '';
+    position: absolute;
+    top: 11px;
+    right: 5px;
+    width: 1px;
+    height: 20px;
+    background: #c7c8cc;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-item
+    #verification {
+    z-index: 10;
+    border: none;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-item
+    #verification {
+    top: 11px;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-qr
+    .advisory-title {
+    margin-top: 0;
+  }
+
+  #error-message-phone {
+    bottom: -28px !important;
+  }
+
+  #error-message-phone::before {
+    display: none;
+  }
+
+  #advisory-container .advisory-card .advisory-form .advisory-qr img {
+    width: 110px;
+  }
+}
+
+.send-btn {
+  pointer-events: none;
+  color: #c7c8cc !important;
+}
+
+@media screen and (max-width: 480px) {
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-box
+    .advisory-form-item {
+    font-size: 13px;
+  }
+
+  #advisory-container .advisory-card .advisory-form-area .advisory-title {
+    font-size: 15px;
+  }
+
+  #product-advisory {
+    background: none;
+  }
+
+  #advisory-container .advisory-card .advisory-form {
+    background: url(../../img/product/end_rendering/advisory/advisory.png)
+      no-repeat center/cover;
+    border: 1px solid#c7c8cd;
+    flex-direction: column;
+  }
+
+  #advisory-container .advisory-card .advisory-form > div {
+    width: 100%;
+  }
+
+  #advisory-container
+    .advisory-card
+    .advisory-form
+    .advisory-form-area
+    .advisory-form-box
+    .advisory-form-item {
+    flex: 0 0 100%;
+  }
+}
+#error-message-length {
+  margin-top: 20px;
+}
+@media (min-width: 375px) and (max-width: 479px) {
+  #advisory-container .advisory-card .advisory-form-area .advisory-title {
+    font-size: 15px;
+  }
+
+  #advisory-container {
+    padding: 30px 10px 6px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  #advisory-container {
+    padding: 30px 6px 6px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  #advisory-container .advisory-card .advisory-form-area .advisory-title {
+    font-size: 15px;
+  }
+  #advisory-container .advisory-card .advisory-form-area .advisory-title {
+    height: 75px;
+  }
+}

@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Header</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/navigation.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div id="header-web">
+        <img src="./img/header/logo_pc.png" alt="" />
+        <a href="./index.html" class="title"> 图观™<span class="title-small">只为打造精品</span> </a>
+        <div class="header-right">
+          <ul class="menu">
+            <li>
+              <a href="/index.html">首页</a>
+            </li>
+            <li>
+              <a href="/product/intelligent-twin-engineering.html">智能孪生体工程</a>
+            </li>
+            <li onclick="menuShow(this)">
+              <a href="javascript:;">产品及服务</a>
+              <div class="secondary-menu" style="display: none">
+                <ul>
+                  <div class="menu-title"><span class="iconfont iconnav_icon_handbook"></span>核心产品</div>
+                  <li>
+                    <a href="/product/web-editor.html">场景编辑器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/streaming-server.html">场景服务器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/unified-development-API.html">统一开发API</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/api-test.html">统一API调试器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/application-editor.html">应用编辑器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+
+                <ul>
+                  <div class="menu-title"><span class="iconfont iconnav_icon_renderclient"></span>实施服务</div>
+                  <li>
+                    <a href="/product/scene-building-service.html">场景构建服务</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/application-development-service.html">应用开发服务</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/training-technical-support.html">培训及技术支持</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li onclick="menuShow(this)">
+              <a href="javascript:;">行业解决方案</a>
+              <div class="secondary-menu" style="display: none">
+                <ul class="two-menu">
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>智慧城市</div>
+                    <li>
+                      <a href="/industry/smart-city/smart-city.html">智慧城市</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-city/smart-management.html">智慧城管</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-scenic.html">智慧文旅</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>公共安全</div>
+                    <li>
+                      <a href="/industry/public-health/public-health-police.html">智慧警务</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/public-health/public-health-traffic-control.html">智慧交管</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/public-health/public-health-security.html">智慧安保</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/public-health/public-emergency-management.html">智慧应急</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-city/smart-weather.html">智慧气象</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/public-health/public-health-jail.html">智慧监所</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                  </ul>
+                </ul>
+
+                <ul class="two-menu">
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>智慧园区</div>
+                    <li>
+                      <a href="/industry/smart-park/smart-park.html">智慧园区</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-school.html">智慧校园</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-hospital.html">智慧医院</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-room.html">智慧机房</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/park-security.html">园区安防</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>智慧交通</div>
+                    <li>
+                      <a href="/industry/public-health/public-health-traffic.html">智慧交通</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-customs.html">智慧海关</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-harbour.html">智慧港口</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-airport.html">智慧机场</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-city/smart-highspeed.html">智慧高速</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                  </ul>
+                </ul>
+
+                <ul class="two-menu">
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>智慧水利</div>
+                    <li>
+                      <a href="/industry/smart-city/smart-walter.html">智慧水务</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-city/smart-water-conservancy.html">智慧水利</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>工业制造</div>
+                    <li>
+                      <a href="/industry/smart-park/smart-factory.html">智慧工厂</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-coal-mine.html">智慧煤矿</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-city/smart-electricity.html">智慧电力</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/industry/smart-park/smart-storage.html">智慧仓储</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                  </ul>
+                </ul>
+
+                <ul class="two-menu">
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>航天军工</div>
+                    <li>
+                      <a href="/industry/smart-park/smart-space-battlefield.html">航天军工</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                    <li>
+                      <a href="javascript:;"></a>
+                      <span class="iconfont iconnav_icon_normalarrow" style="color: transparent"></span>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>营销展示</div>
+                    <li>
+                      <a href="/industry/product-market/product-market-display.html">产品营销展示</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                  </ul>
+                </ul>
+
+                <ul class="two-menu">
+                  <ul>
+                    <div class="menu-title"><span class="iconfont iconnav_icon_apps"></span>成功案例</div>
+                    <li>
+                      <a href="/case/case.html">案例总览</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/case/smart-city.html">智慧城市</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/case/case-park.html">智慧园区</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/case/public-security.html">公共安全</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/case/case-traffic.html">智慧交通</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/case/case-water-conservancy.html">智慧水利</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/case/case-industrial-manufacturing.html">工业制造</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                    <li>
+                      <a href="/case/case-aerospace-military-industry.html">航天军工</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+            </li>
+
+            <li onclick="menuShow(this)">
+              <!--  <a href="/case/online-experience.html">在线体验</a>  -->
+
+              <a href="javascript:;">在线体验</a>
+              <div class="secondary-menu alone-menu" style="display: none">
+                <ul class="secondary-menu-experience">
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/online-experience/code-sandbox.html">API代码开发</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/online-experience/features-example.html">场景特性</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/online-experience/application-configuration.html">APP应用配置</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/online-experience/application-example.html">行业应用</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+                <ul class="secondary-menu-experience">
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="https://www.tuguan.net/apiTester/">接口调试器</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="https://www.tuguan.net/sceneEditor/">场景编辑器</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="https://www.tuguan.net/studio/">应用编辑器</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li onclick="menuShow(this)">
+              <a href="javascript:;">产品购买</a>
+              <div class="secondary-menu alone-menu" style="display: none">
+                <ul>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/price-deployment/public-cloud-edit.html">公有云产品购买</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <!-- <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/price-deployment/public-cloud-serve.html">公有云服务</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li> 
+                  <li> 
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/price-deployment/private-cloud-edit.html">端渲染开发部署版</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/price-deployment/private-cloud-serve.html">端渲染项目部署版</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li> 
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/price-deployment/private-cloud-stream.html">流渲染部署版</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>-->
+                </ul>
+              </div>
+            </li>
+            <li onclick="menuShow(this)">
+              <a href="javascript:;">开发教程</a>
+              <div class="secondary-menu tutorial" style="display: none">
+                <div class="secondary-menu-doc-wrap video">
+                  <div class="menu-title"><img src="/img/video-tutorial/secondary_menu_tutorial_icon.png" />视频教程</div>
+                  <ul class="secondary-menu-tutorial">
+                    <li>
+                      <div><span class="circular"></span><a href="/development-tutorial/video-tutorial.html?video=primary">产品综述</a></div>
+                      <div class="click">
+                        <span></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span><a href="/development-tutorial/video-tutorial.html?video=senior">进阶教程</a></div>
+                      <div class="click"><span></span><span class="iconfont iconnav_icon_normalarrow"></span></div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span><a href="/development-tutorial/video-tutorial.html?video=comprehensive">综合应用</a></div>
+                      <div class="click"><span></span><span class="iconfont iconnav_icon_normalarrow"></span></div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span><a href="/development-tutorial/video-tutorial.html?video=liveRoom">图观直播间</a></div>
+                      <div class="click"><span></span><span class="iconfont iconnav_icon_normalarrow"></span></div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="secondary-menu-doc-wrap tutorial">
+                  <div class="menu-title"><img src="/img/video-tutorial/secondary_menu_tutorial_doc_icon.png" />产品文档</div>
+                  <ul class="secondary-menu-tutorial">
+                    <li>
+                      <div><span class="circular"></span><a href="/doc/scene-editor/createmodel/">三维建模指南</a></div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span>场景编辑器</div>
+                      <div class="click">
+                        <span><a href="/doc/scene-editor/?features">功能手册</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="/doc/scene-editor/?tutorial">开发教程</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="/development-tutorial/video-tutorial.html?video=sceneEditor">视频教程</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span>场景服务器</div>
+                      <div class="click">
+                        <span><a href="/doc/streaming-server/?features">功能手册</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="javascript:;"></a></span>
+                        <!--  <span><a href="/doc/streaming-server/tutorials/">上手指南</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>  -->
+                      </div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span>应用编辑器</div>
+                      <div class="click">
+                        <span><a href="/doc/application-editor/?features">功能手册</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="/doc/application-editor/?tutorial">开发教程</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="/development-tutorial/video-tutorial.html?video=applicationEditor">视频教程</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span>统一开发API</div>
+                      <div class="click">
+                        <span><a href="/doc/tg-api/?manual">功能手册</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="/doc/tg-api/?tutorial">开发教程</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="/development-tutorial/video-tutorial.html?video=unifiedDevApiAndTest">视频教程</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div><span class="circular"></span>统一API调试器</div>
+                      <div class="click">
+                        <!-- <span><a href="/doc/api-tester/tutorials/">开发教程</a></span>  -->
+                        <span><a href="/doc/tg-api/?tutorial.tutorial_2">开发教程</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>
+                      </div>
+                      <div>
+                        <span><a href="javascript:;"></a></span>
+                        <!--  <span><a href="/doc/api-tester/?features">功能手册</a></span>
+                        <span class="iconfont iconnav_icon_normalarrow"></span>  -->
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="/bbs" class="tuguan_interlocution" style="outline: none">图观问答</a>
+            </li>
+
+            <li onclick="menuShow(this)" style="display: none">
+              <a href="javascript:;">应用商城</a>
+            </li>
+
+            <li onclick="menuShow(this)">
+              <a href="javascript:;">关于我们</a>
+              <div class="secondary-menu alone-menu" style="display: none">
+                <ul>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <a href="/about/intro.html">图观™介绍</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <!-- <a href="/about/contact.html">联系我们</a> -->
+                      <a href="/about/industry-perspective.html">行业观点</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="circular"></span>
+                      <!-- <a href="/about/acvitity.html">最新动态</a> -->
+                      <a href="/about/news.html">资讯动态</a>
+                    </div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-botton-container">
+          <span class="header-botton-phone"><i class="bi bi-telephone-fill"></i> 400-689-6796</span>
+          <div id="userBar" style="margin-top: 5px"></div>
+          <a id="btnLogin" href="/login.html" class="header-botton-login" style="display: block">登录</a>
+          <a id="btnRegister" href="/register.html" class="header-botton-register" style="display: block"> 立即注册 </a>
+        </div>
+      </div>
+
+      <!-- 手机端dom -->
+      <div id="header-phone">
+        <div class="header-top">
+          <div class="logo_box">
+            <img class="logo_phone" src="/img/header/logo_phone.png" alt="" />
+            <a href="/index.html" class="logo">图观™</a>
+          </div>
+          <div class="menu-icon">
+            <!-- <span class="iconfont iconnormal_icon_telephone"></span> -->
+            <div class="collapse navbar-collapse" id="phoneUserBar" style="justify-content: center"></div>
+            <span class="iconfont iconnav_icon_phone_register_signin" onclick="loginShow()"></span>
+            <span class="iconfont iconnav_icon_phone_nav" onclick="showMenu()"></span>
+          </div>
+        </div>
+        <div class="mask" onclick="closeShowMenu()">
+          <div class="login-box">
+            <a href="/login.html">登录</a>
+            <a href="/register.html">立即注册</a>
+          </div>
+        </div>
+        <ul id="menu-list">
+          <li onclick="menuListShow(this)">
+            <div>
+              <a href="/product/intelligent-twin-engineering.html" class="title">智能孪生体工程</a>
+            </div>
+          </li>
+
+          <li onclick="menuListShow(this)">
+            <div>
+              <a href="javascript:;" class="title">产品及服务</a>
+              <span class="iconfont iconnormal_icon_arrowldown"> </span>
+            </div>
+            <ul class="mini-menu">
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_handbook"></span>核心产品</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/product/web-editor.html">场景编辑器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/streaming-server.html">场景服务器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/unified-development-API.html">统一开发API</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/api-test.html">统一API调试器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/application-editor.html">应用编辑器</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_renderclient"></span>实施服务</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/product/scene-building-service.html">场景构建服务</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/application-development-service.html">应用开发服务</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/product/training-technical-support.html">培训及技术支持</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li onclick="menuListShow(this)">
+            <div>
+              <a href="javascript:;" class="title">行业解决方案</a>
+              <span class="iconfont iconnormal_icon_arrowldown"> </span>
+            </div>
+            <ul class="mini-menu">
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>智慧城市</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/smart-city/smart-city.html">智慧城市</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-city/smart-management.html">智慧城管</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-scenic.html">智慧文旅</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>公共安全</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/public-health/public-health-police.html">智慧警务</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/public-health/public-health-traffic-control.html">智慧交管</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/public-health/public-health-security.html">智慧安保</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/public-health/public-emergency-management.html">智慧应急</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-city/smart-weather.html">智慧气象</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/public-health/public-health-jail.html">智慧监所</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>智慧园区</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/smart-park/smart-park.html">智慧园区</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-school.html">智慧校园</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-hospital.html">智慧医院</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-room.html">智慧机房</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/park-security.html">园区安防</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>智慧交通</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/public-health/public-health-traffic.html">智慧交通</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-customs.html">智慧海关</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-harbour.html">智慧港口</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-airport.html">智慧机场</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-city/smart-highspeed.html">智慧高速</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>智慧水利</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/smart-city/smart-walter.html">智慧水务</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-city/smart-water-conservancy.html">智慧水利</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>工业制造</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/smart-park/smart-factory.html">智慧工厂</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-coal-mine.html">智慧煤矿</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-city/smart-electricity.html">智慧电力</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-park/smart-storage.html">智慧仓储</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>航天军工</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/smart-park/smart-space-battlefield.html">航天军工</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>营销展示</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/industry/product-market/product-market-display.html">产品营销展示</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <div>
+                  <div class="icons-title"><span class="iconfont iconnav_icon_apps"></span>成功案例</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <a href="/case/case.html">案例汇总</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/case/smart-city.html">智慧城市</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/case/case-park.html">智慧园区</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/case/public-security.html">公共安全</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/case/case-traffic.html">智慧交通</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/industry/smart-city/smart-water-conservancy.html">智慧水利</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/case/case-industrial-manufacturing.html">工业制造</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <a href="/case/case-aerospace-military-industry.html">航天军工</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li onclick="menuListShow(this)">
+            <div>
+              <a href="/online-experience/features-example.html" class="title">在线体验</a>
+            </div>
+          </li>
+          <!-- 产品购买 -->
+          <!-- <li onclick="menuListShow(this)">
+            <div>
+              <a href="javascript:;" class="title">产品购买</a>
+              <span class="iconfont iconnormal_icon_arrowldown">
+            </div>
+            <ul class="mini-menu menu-about">
+              <li>
+                <a href="/price-deployment/public-cloud-edit.html"><span></span>公有云产品购买</a>
+                <span class="iconfont iconnav_icon_normalarrow"></span>
+              </li>
+              <li>
+                <a href="/price-deployment/public-cloud-serve.html"><span></span>公有云服务</a>
+                <span class="iconfont iconnav_icon_normalarrow"></span>
+              </li>
+              <li>
+                <a href="/price-deployment/private-cloud-edit.html"><span></span>端渲染开发部署版</a>
+                <span class="iconfont iconnav_icon_normalarrow"></span>
+              </li>
+            </ul>
+          </li> -->
+          <li onclick="menuListShow(this)">
+            <div>
+              <a href="javascript:;" class="title">开发教程</a>
+              <span class="iconfont iconnormal_icon_arrowldown"> </span>
+            </div>
+            <ul class="mini-menu tutorial">
+              <li>
+                <div>
+                  <div class="icons-title"><img src="/img/video-tutorial/secondary_menu_tutorial_icon.png" />视频教程</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <div><span class="circular"></span> <a href="/development-tutorial/video-tutorial.html?video=primary">产品综述</a></div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div><span class="circular"></span> <a href="/development-tutorial/video-tutorial.html?video=senior">进阶教程</a></div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                  <li>
+                    <div><span class="circular"></span> <a href="/development-tutorial/video-tutorial.html?video=comprehensive">综合应用</a></div>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="mini-video">
+                <div>
+                  <div class="icons-title"><img src="/img/video-tutorial/secondary_menu_tutorial_doc_icon.png" />产品文档</div>
+                  <span class="iconfont iconnormal_icon_arrowldown down"> </span>
+                </div>
+                <ul>
+                  <li>
+                    <div><span class="circular"></span><a href="/doc/scene-editor/createmodel/">三维建模指南</a></div>
+                  </li>
+                  <li>
+                    <div><span class="circular"></span>场景编辑器</div>
+                    <div>
+                      <a href="/doc/scene-editor/?features">功能手册</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <a href="/doc/scene-editor/?tutorial">开发教程</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <a href="/development-tutorial/video-tutorial.html?video=sceneEditor">视频教程</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div><span class="circular"></span>场景服务器</div>
+                    <div>
+                      <a href="/doc/streaming-server/?features">功能手册</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <!--  <a href="/doc/streaming-server/tutorials/">上手指南</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>  -->
+                    </div>
+                  </li>
+                  <li>
+                    <div><span class="circular"></span>应用编辑器</div>
+                    <div>
+                      <a href="/doc/application-editor/?features">功能手册</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <a href="/doc/application-editor/?tutorial">开发教程</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <a href="/development-tutorial/video-tutorial.html?video=applicationEditor">视频教程</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div><span class="circular"></span>统一开发API</div>
+                    <div>
+                      <a href="/doc/tg-api/?manual">功能手册</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <a href="/doc/tg-api/?tutorial">开发教程</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <a href="/development-tutorial/video-tutorial.html?video=unifiedDevApiAndTest">视频教程</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div><span class="circular"></span>统一API调试器</div>
+                    <div>
+                      <a href="/doc/tg-api/?tutorial.tutorial_2">开发教程</a>
+                      <span class="iconfont iconnav_icon_normalarrow"></span>
+                    </div>
+                    <div>
+                      <!--  <a href="javascript:;">功能手册</a>
+                    <span class="iconfont iconnav_icon_normalarrow"></span>  -->
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <a href="/bbs" class="title" style="outline: none">图观问答</a>
+            </div>
+          </li>
+          <li onclick="menuListShow(this)">
+            <div>
+              <a href="javascript:;" class="title">关于我们</a>
+              <span class="iconfont iconnormal_icon_arrowldown"> </span>
+            </div>
+            <ul class="mini-menu menu-about">
+              <li>
+                <a href="/about/intro.html"><span></span>图观™介绍</a>
+                <span class="iconfont iconnav_icon_normalarrow"></span>
+              </li>
+              <li>
+                <a href="/about/industry-perspective.html"><span></span>行业观点</a>
+                <span class="iconfont iconnav_icon_normalarrow"></span>
+              </li>
+              <li>
+                <a href="/about/news.html"><span></span>资讯动态</a>
+                <span class="iconfont iconnav_icon_normalarrow"></span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
