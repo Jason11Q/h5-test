@@ -57,7 +57,25 @@
           .then((settings) => {
             debugger;
             coreInstance.applySettings(settings);
+
+            // 少编辑态配置发布效果和编辑态发布不一致，且无论是否发布态场景加载重新发布手动干预setting无论是直接修改_content.sceneSetting 还是applySettings再次发布不保存会直接以服务setting为准，保存后发布setting重新获取，设置的贴图也不会生效
           });
+      }
+
+      function publish() {
+        coreInstance.exportPackScene(
+          (aa) => {
+            let al = document.createElement('a');
+            debugger;
+            al.href = window.URL.createObjectURL(aa);
+            al.download = 'new1';
+            al.click();
+          },
+          (bb) => console.log(bb),
+          {
+            textureSizeFactor: 1,
+          }
+        );
       }
     </script>
   </body>
