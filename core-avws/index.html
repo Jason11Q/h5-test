@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./scene/avw.scene.core.dev.js"></script>
+    <style>
+      html,
+      body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      // 取得绘制场景的 DOM 元素
+      var container = document.getElementById('container');
+      // 创建并获取场景实例对象
+      var coreInstance = new avw.scene.Core();
+
+      // 初始化场景
+      function init() {
+        coreInstance.init({
+          container,
+          origin: 'https://www.tuguan.net/api/sceneEditor',
+        });
+
+        coreInstance.loadScene(
+          {
+            name: '模型加载',
+            scenePath: './avws/PublishScene.avws',
+          },
+          () => {
+            coreInstance.setCurrentState('作业');
+          }
+        );
+      }
+
+      init();
+
+      function setSettings() {
+        fetch('./settings.json')
+          .then((res) => res.json())
+          .then((settings) => {
+            debugger;
+            coreInstance.applySettings(settings);
+          });
+      }
+    </script>
+  </body>
+</html>

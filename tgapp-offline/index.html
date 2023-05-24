@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图观引擎-API代码示例-应用开发-模型对象点击-打开窗口</title>
+  <link rel="stylesheet" href="https://tuguan.gitee.io/tgapiexample/css/common.css" />
+  <link rel="stylesheet" href="https://tuguan.gitee.io/tgapiexample/css/elementui.css" />
+  <script src="https://tuguan.gitee.io/tgapiexample/js/config.js"></script>
+
+  <script src="//www.tuguan.net/public/tgapp/TGApp.min.js"></script>
+  <!-- <script src="./TGApp.min.js"></script> -->
+  <script src="//tuguan.gitee.io/tgapiexample/lib/axios.js"></script>
+  <script src="//tuguan.gitee.io/tgapiexample/lib/vue.js"></script>
+  <script src="//tuguan.gitee.io/tgapiexample/lib/elementui.js"></script>
+  <script src="./modelOpenWithDlg.js"></script>
+  <style>
+    .bt {
+      width: 100px;
+      height: 50px;
+      background-color: aqua;
+      position: absolute;
+      top: 500px;
+      left: 100px;
+    }
+
+    .bt2 {
+      width: 100px;
+      height: 50px;
+      background-color: aqua;
+      position: absolute;
+      top: 600px;
+      left: 100px;
+    }
+
+    .bt3 {
+      width: 100px;
+      height: 50px;
+      background-color: aqua;
+      position: absolute;
+      top: 500px;
+      right: 100px;
+    }
+
+    .bt4 {
+      width: 100px;
+      height: 50px;
+      background-color: aqua;
+      position: absolute;
+      top: 600px;
+      right: 100px;
+    }
+
+    .bt5 {
+      width: 100px;
+      height: 50px;
+      background-color: aqua;
+      position: absolute;
+      top: 700px;
+      right: 100px;
+    }
+
+    .bt6 {
+      width: 100px;
+      height: 50px;
+      background-color: aqua;
+      position: absolute;
+      top: 800px;
+      right: 100px;
+    }
+
+    .bt7 {
+      width: 100px;
+      height: 50px;
+      background-color: aqua;
+      position: absolute;
+      top: 900px;
+      right: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app" id="app">
+    <!-- 头部 -->
+    <div class="header-wrap">
+      <a href="//www.tuguan.net" target="_blank">图观引擎</a><span>-API代码示例-应用开发-模型对象点击-打开窗口</span><br />
+      <span class="ctrl">点击场景中的“住宅楼”模型，弹窗显示该对象信息</span>
+      <img src="//tuguan.gitee.io/tgapiexample/image/tuguan.png" />
+    </div>
+    <!-- 场景 -->
+    <div id="container"></div>
+    <div class="bt" @click="change(true)">显示</div>
+    <div class="bt2" @click="change(false)">隐藏</div>
+    <!-- <div class="bt3" @click="setModelArticulation('red')">红色</div>
+    <div class="bt4" @click="setModelArticulation('yellow')">黄色</div>
+    <div class="bt5" @click="setModelArticulation('blue')">蓝色</div>
+    <div class="bt6" @click="setModelArticulation('orange')">橙色</div>
+    <div class="bt7" @click="setModelArticulation('transparent')">默认</div> -->
+    <!-- 底部 -->
+    <div class="footer-box">
+      <span>基于图观™数字孪生应用开发引擎构建 www.digihail.com/tuguan.html</span>
+      <span>版权所有 北京数字冰雹信息技术有限公司</span>
+    </div>
+    <!-- 进度条遮罩 -->
+    <div v-show="isZZ" class="avw-loader">
+      <section><span class="loader-112">L &nbsp; ading </span></section>
+    </div>
+  </div>
+</body>
+
+</html>
