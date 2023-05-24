@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./lib/avw.scene.core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      let hostServer = 'http://172.16.2.65:3070';
+      let developUrl = hostServer + '/publish/scene/api/4zhenzu9';
+      let sceneEditorServer = '/api/sceneEditor';
+
+      let index = developUrl.lastIndexOf('/');
+      let shortCode = developUrl.substring(index + 1);
+
+      window.isDebug = true;
+      let coreInstance = new avw.scene.Core();
+
+      // 请求发布方式
+      // http://172.16.2.65:3070/api/sceneEditor/v1/scenes/c1cc58c2-9ad0-49e2-bf91-89eaa8d5964f/VerificationScenePublishType
+      // 请求token 按发布方式
+
+      // http://172.16.2.65:3070/api/user/v1/visitorSceneWithPassword/c1cc58c2-9ad0-49e2-bf91-89eaa8d5964f
+      // http://172.16.2.65:3070/api/sceneEditor/v1/visitorScene/c1cc58c2-9ad0-49e2-bf91-89eaa8d5964f (404 65 hosting)
+
+      // 判断访问次数
+      // http://172.16.2.65:3070/api/sceneEditor/v1/scenes/c1cc58c2-9ad0-49e2-bf91-89eaa8d5964f/GetVisitRecord
+      // HEAD 统计 isDevelopCall 区分二次开发，et请求设备类型，PC or Mobile。
+      // http://172.16.2.65:3070/publish/scene/api/4zhenzu9?isDevelopCall=false&et=PC
+
+      const getToken = () => {
+        axios({
+          method: 'get',
+          url: `http://172.16.2.65:3070${sceneEditorServer}/v1/published/shortCodes/${shortCode}/sceneInfo`,
+        }).then((res) => {
+          let sceneID = res.data.sceneID;
+          axios({ method: 'post', url: `http://172.16.2.65:3070/api/user/v1/visitorScene/${sceneID}` }).then((res2) => {
+            let token = res2.data.accessToken;
+
+            coreInstance.init();
+            coreInstance.setAvwToken('header', 'authorization:bearer', token);
+
+            coreInstance.getTGServers({ path: developUrl }, (result) => {
+              console.log(result);
+            });
+          });
+        });
+      };
+
+      getToken();
+    </script>
+  </body>
+</html>
