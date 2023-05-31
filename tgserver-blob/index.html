@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./lib/avw.scene.core.min.js"></script>
+    <script src="./lib/axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      window.isDebug = true;
+      let coreInstance = new avw.scene.Core();
+      coreInstance.init();
+
+      setTimeout(() => {
+        axios.get('./avws/7.avws', { responseType: 'arraybuffer' }).then((res) => {
+          let data = res.data;
+
+          let blob = new Blob([data]);
+          let url = URL.createObjectURL(blob);
+
+          // url : avws 路径
+          coreInstance.getTGServers({ path: url }, (result) => {
+            console.log(result);
+          });
+        });
+      }, 0);
+    </script>
+  </body>
+</html>
