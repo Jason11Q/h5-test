@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/lib/axios.min.js"></script>
+    <script src="//localhost/debug/avw.scene.core.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="wrap-panel">
+      <a href="javascript:;" class="ui-upload">
+        <input type="file" name="file" id="file" onchange="test()" />
+        <span>上传…</span>
+      </a>
+      <br />
+      <button class="flow" onclick="load()">加载</button>
+      <br />
+    </div>
+    <div class="container" id="container"></div>
+
+    <script>
+      let currentGroup = null;
+      let scene_prefix = 'v1';
+      let baseURL = 'http://localhost:30701';
+      let sceneShortCode = 'abv1pttj';
+
+      axios.defaults.baseURL = baseURL;
+
+      axios.interceptors.response.use((res) => {
+        console.log(1, res);
+        const sceneID = res.headers['Sceneid'];
+        const sCode = res.headers['sCode'];
+        const shortCode = res.headers['shortCode'];
+        console.log(sceneID, sCode, shortCode);
+        return res;
+      });
+
+      let container = document.querySelector('#container');
+      let modelInstance = new avw.scene.Core();
+      modelInstance.init({
+        container,
+      });
+
+      let login = async () => {
+        let res = await axios({
+          url: `/api/user/${scene_prefix}/login`,
+          method: 'post',
+          data: {
+            userName: 'test',
+            password: '2bbe0c48b91a7d1b8a6753a8b9cbe1db16b84379f3f91fe115621284df7a48f1cd71e9beb90ea614c7bd924250aa9e446a866725e685a65df5d139a5cd180dc9',
+            validCode: '',
+          },
+        });
+        // 设置token
+        axios.defaults.headers.Authorization = `Bearer ${res.data.accessToken}`;
+        axios.defaults.headers.WithCredentials = true;
+        axios.defaults.headers.ResponseType = 'application/json';
+        // 设置请求源，接收跨域接口返回header
+        // axios.defaults.headers.Origin = baseURL;
+      };
+
+      let importScene = async (groupID, formData) => {
+        let res = await axios({
+          url: `/api/sceneHosting-offline/${scene_prefix}/sceneGroups/${groupID}/importScene`,
+          method: 'post',
+          data: formData,
+          noLoading: true,
+          responseType: 'arraybuffer',
+        });
+        return res;
+      };
+
+      let rootGroup = async () => {
+        let res = await axios.get(`/api/sceneHosting-offline/${scene_prefix}/my/rootGroup`);
+        currentGroup = res.data.rootGroup.id;
+      };
+
+      async function test(a) {
+        //index.html:28 Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules
+        await rootGroup();
+
+        let fileList = document.querySelector('#file').files;
+
+        let formData = new FormData();
+        formData.append('file', fileList[0]);
+
+        let res = await importScene(currentGroup, formData);
+
+        let blob = new Blob([res.data], { type: 'application/octet-stream' });
+        let url = window.URL.createObjectURL(blob);
+
+        modelInstance.getTGServers({ path: url }, (res) => {
+          console.log(res);
+
+          modelInstance.loadScene({
+            scenePath: url,
+          });
+        });
+      }
+
+      async function load() {
+        let url = `${baseURL}/publish/scenedeploy/api/${sceneShortCode}?isDevelopCall=false`;
+
+        let sceneInfoRes = await axios.get(`/api/sceneHosting-offline/${scene_prefix}/published/shortCodes/${sceneShortCode}/sceneInfo`);
+
+        let res = await axios.post(`/api/sceneHosting-offline/${scene_prefix}/visitorScene/${sceneInfoRes.data.sceneID}`);
+        let token = res.data.accessToken;
+
+        modelInstance.setAvwToken('header', 'authorization:bearer', token);
+
+        modelInstance.loadScene({
+          scenePath: url,
+          token,
+        });
+      }
+
+      // TODO: axios can not get response header
+      login();
+    </script>
+  </body>
+</html>
